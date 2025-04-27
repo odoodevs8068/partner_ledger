@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-inherit="account_accountant.reconciliation.line.mv_line" t-inherit-mode="extension">
+            <xpath expr="//tr/td[3]" position="after">
+                <td class="cell_left">
+                    <t t-if="line.source_document">
+                        <t t-esc="line.source_document"/>
+                    </t>
+                </td>
+            </xpath>
+    </t>
+</templates>
